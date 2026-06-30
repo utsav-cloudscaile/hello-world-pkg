@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+# IMPORTANT: PyPI package names must be globally unique across all of PyPI.
+# "hello-world-pkg" is very likely already taken. Before you upload, change
+# this name (and the matching folder name under src/) to something unique,
+# e.g. "hello-world-pkg-yourusername".
+name = "hello-world-pkg-utsav-cloudscaile"
+version = "0.1.0"
+description = "A tiny example package that says hello."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [
+    { name = "Utsav Sheth", email = "utsav.sheth@cloudscaile.com" }
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/utsav-cloudscaile/hello-world-pkg"
+
+[project.scripts]
+hello-world-pkg = "hello_world_pkg:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
